@@ -5,6 +5,8 @@ $(document).ready(function() {
 			type: 'image',
 			removalDelay: 300,
 			mainClass: 'mfp-with-zoom',
+			fixedBgPos: true, 
+			fixedContentPos: true,
 			gallery:{
 				enabled:true
 			},
@@ -32,7 +34,8 @@ $(document).ready(function() {
         mainClass: 'mfp-fade',
         removalDelay: 160,
         preloader: false,
-        fixedContentPos: false,
+		fixedBgPos: true, 
+		fixedContentPos: true,
 		callbacks: {
 			open: function() {
 				$('body').css('overflow', 'hidden');
