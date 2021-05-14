@@ -412,7 +412,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-counter .event-wrap,
 #fh5co-event .event-wrap {
   border: 2px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   padding: 30px;
   width: 100%;
   float: left;
@@ -441,18 +441,36 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-event .event-wrap p,
 #fh5co-event .event-wrap span {
   display: block;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
 #fh5co-counter .event-wrap i,
 #fh5co-event .event-wrap i {
   color: white;
   font-size: 20px;
 }
-#fh5co-counter .event-wrap .event-col,
-#fh5co-event .event-wrap .event-col {
-  width: 50%;
+#fh5co-counter .event-wrap .event-time-col,
+#fh5co-event .event-wrap .event-time-col {
+  width: 30%;
   float: left;
   margin-bottom: 30px;
+}
+
+#fh5co-counter .event-wrap .event-date-col,
+#fh5co-event .event-wrap .event-date-col {
+  width: 70%;
+  float: left;
+  margin-bottom: 30px;
+}
+
+#fh5co-event .event-wrap .btn-maps {
+  background: #fff;
+  padding: 4px 20px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  border-radius: 100px;
 }
 
 #fh5co-counter {
@@ -1085,6 +1103,10 @@ form label {
   font-family: "iCiel Smoothy Cursive", Arial, serif;
   color: #F14E95;
   font-size: 30px;
+  font-weight: 600;
+}
+.couple-half h4 {
+  color: #F14E95;
 }
 .couple-half .groom, .couple-half .bride {
   float: left;

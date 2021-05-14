@@ -20,7 +20,7 @@ $(document).ready(function() {
 				opener: function(openerElement) {
 				// openerElement is the element on which popup was initialized, in this case its <a> tag
 				// you don't need to add "opener" option if this code matches your needs, it's defailt one.
-				return openerElement.is('img') ? openerElement : openerElement.find('img');
+				return openerElement.is('a') ? openerElement : openerElement.find('img');
 				}
 			}
 		});
@@ -28,13 +28,23 @@ $(document).ready(function() {
 
 	var magnifVideo = function() {
 		$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-        disableOn: 700,
         type: 'iframe',
         mainClass: 'mfp-fade',
         removalDelay: 160,
         preloader: false,
-
-        fixedContentPos: false
+        fixedContentPos: false,
+		callbacks: {
+			open: function() {
+				$('body').css('overflow', 'hidden');
+				$(this.container)
+					.find('.mfp-content')
+					.css('height', '90%')
+					.css('width', '80%');
+			},
+			close: function() {
+				$('body').css('overflow', '');
+			},
+		}
     });
 	};
 
