@@ -1,8 +1,7 @@
 const audioPlayer = document.querySelector(".custom-audio-player");
 const audio = new Audio(
-  "https://tainhac123.com/listen/cau-hon-van-mai-huong.OaFVYaWeZ1mi.html"
+  "https://tainhac123.com/listen/ngay-dau-tien-duc-phuc.YhHm3pfxcuKQ.html"
 );
-//credit for song: Adrian kreativaweb@gmail.com
 
 console.dir(audio);
 
@@ -12,32 +11,41 @@ audio.addEventListener(
     audioPlayer.querySelector(".time .length").textContent = getTimeCodeFromNum(
       audio.duration
     );
-    audio.volume = .75;
+    audio.volume = 0.75;
   },
   false
 );
 
 //click on timeline to skip around
 const timeline = audioPlayer.querySelector(".ap-timeline");
-timeline.addEventListener("click", e => {
-  const timelineWidth = window.getComputedStyle(timeline).width;
-  const timeToSeek = e.offsetX / parseInt(timelineWidth) * audio.duration;
-  audio.currentTime = timeToSeek;
-}, false);
+timeline.addEventListener(
+  "click",
+  (e) => {
+    const timelineWidth = window.getComputedStyle(timeline).width;
+    const timeToSeek = (e.offsetX / parseInt(timelineWidth)) * audio.duration;
+    audio.currentTime = timeToSeek;
+  },
+  false
+);
 
 //click volume slider to change volume
 const volumeSlider = audioPlayer.querySelector(".controls .volume-slider");
-volumeSlider.addEventListener('click', e => {
-  const sliderWidth = window.getComputedStyle(volumeSlider).width;
-  const newVolume = e.offsetX / parseInt(sliderWidth);
-  audio.volume = newVolume;
-  audioPlayer.querySelector(".controls .volume-percentage").style.width = newVolume * 100 + '%';
-}, false)
+volumeSlider.addEventListener(
+  "click",
+  (e) => {
+    const sliderWidth = window.getComputedStyle(volumeSlider).width;
+    const newVolume = e.offsetX / parseInt(sliderWidth);
+    audio.volume = newVolume;
+    audioPlayer.querySelector(".controls .volume-percentage").style.width =
+      newVolume * 100 + "%";
+  },
+  false
+);
 
 //check audio percentage and update time accordingly
 setInterval(() => {
   const progressBar = audioPlayer.querySelector(".progress");
-  progressBar.style.width = audio.currentTime / audio.duration * 100 + "%";
+  progressBar.style.width = (audio.currentTime / audio.duration) * 100 + "%";
   audioPlayer.querySelector(".time .current").textContent = getTimeCodeFromNum(
     audio.currentTime
   );

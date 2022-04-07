@@ -308,6 +308,7 @@ h1, h2, h3, h4, h5, h6, figure {
   height: 900px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   width: 100%;
 }
@@ -364,14 +365,12 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-counter,
 #fh5co-event {
-  height: 850px;
   float: left;
 }
 #fh5co-counter .display-t,
 #fh5co-counter .display-tc,
 #fh5co-event .display-t,
 #fh5co-event .display-tc {
-  height: 700px;
   display: table;
   width: 100%;
 }
@@ -396,7 +395,7 @@ h1, h2, h3, h4, h5, h6, figure {
   bottom: 0;
   background: rgba(0, 0, 0, 0.4);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   #fh5co-counter,
   #fh5co-event {
     height: inherit;
@@ -421,7 +420,7 @@ h1, h2, h3, h4, h5, h6, figure {
   -ms-border-radius: 4px;
   border-radius: 4px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   #fh5co-counter .event-wrap,
   #fh5co-event .event-wrap {
     margin-bottom: 10px;
@@ -679,7 +678,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 0;
   margin: 0 0 10px 1%;
   list-style: none;
-  min-height: 400px;
+  min-height: 440px;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -697,7 +696,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 #fh5co-gallery-list li a {
-  min-height: 400px;
+  min-height: 440px;
   padding: 2em;
   position: relative;
   width: 100%;
@@ -977,7 +976,7 @@ form label {
   display: inline-block;
   width: 10vh;
   height: 10vh;
-  background: rgba(241, 78, 149, 0.8);
+  background: rgba(241, 78, 149, 0.7);
   margin: 0 4px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
