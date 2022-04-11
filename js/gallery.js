@@ -49,7 +49,7 @@ class GalleryType {
     for (let i = 0; i < galleryType.numberOfImages; i++) {
       let imageUrl = storageImgUrl.replace(
         imagePath,
-        `${galleryType.name}-images%2F${i + 1}.jpeg`
+        `${galleryType.name}-images%2F${i + 1}.jpg`
       );
       const aTag = document.createElement("a");
       aTag.className = "image-popup";
