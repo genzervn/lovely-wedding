@@ -1,5 +1,5 @@
 class GalleryType {
-  static Prewedding = new GalleryType("prewedding", "Pre-wedding", 14);
+  static Prewedding = new GalleryType("prewedding", "Pre-wedding", 49);
   static MassesAndRites = new GalleryType(
     "massed-and-rites",
     "Thánh lễ & nghi thức",
