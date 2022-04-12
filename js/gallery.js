@@ -36,30 +36,39 @@ class GalleryType {
     }
   };
 
+  var getImageUrl = function (galleryType, isThumb, imageIndex) {
+    const imagePath = "imagePath";
+    var storageImgUrl =
+      "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media";
+    return storageImgUrl.replace(
+      imagePath,
+      `${galleryType.name}-images%2F${
+        isThumb ? "thumb%2F" : ""
+      }${imageIndex}.jpg`
+    );
+  };
+
   var setupGalleryDescription = function () {
     document.getElementById("gallery-description").innerHTML =
       getGalleryType().displayName;
   };
 
   var setupGalleryImage = function () {
-    var imagePath = "imagePath";
-    var storageImgUrl =
-      "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media";
     let galleryType = getGalleryType();
     for (let i = 0; i < galleryType.numberOfImages; i++) {
-      let imageUrl = storageImgUrl.replace(
-        imagePath,
-        `${galleryType.name}-images%2F${i + 1}.jpg`
-      );
+      let imageUrl = getImageUrl(galleryType, false, i + 1);
+      let thumbImageUrl = getImageUrl(galleryType, true, i + 1);
       const aTag = document.createElement("a");
       aTag.className = "image-popup";
       aTag.href = imageUrl;
       const img = document.createElement("img");
-      img.src = imageUrl;
-      img.loading = "lazy";
+      img.className = "lozad";
+      img.dataset.src = thumbImageUrl;
       aTag.appendChild(img);
       document.getElementById("gallery-content").appendChild(aTag);
     }
+    const observer = lozad();
+    observer.observe();
   };
 
   $(function () {
