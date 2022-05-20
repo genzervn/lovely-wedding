@@ -3,10 +3,10 @@ class GalleryType {
   static MassesAndRites = new GalleryType(
     "massed-and-rites",
     "Thánh lễ & nghi thức",
-    0
+    306
   );
-  static GroomParty = new GalleryType("groom-party", "Tiệc nhà trai", 0);
-  static BrideParty = new GalleryType("bride-party", "Tiệc nhà gái", 0);
+  static GroomParty = new GalleryType("groom-party", "Tiệc nhà trai", 224);
+  static BrideParty = new GalleryType("bride-party", "Tiệc nhà gái", 153);
 
   constructor(name, displayName, numberOfImages) {
     this.name = name;
