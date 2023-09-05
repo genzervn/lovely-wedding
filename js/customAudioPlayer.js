@@ -1,6 +1,6 @@
 const audioPlayer = document.querySelector(".custom-audio-player");
 const audio = new Audio(
-  "https://tainhac123.com/listen/ngay-dau-tien-duc-phuc.YhHm3pfxcuKQ.html"
+  "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/musics%2FNgayDauTien-DucPhuc.mp3?alt=media"
 );
 
 console.dir(audio);
