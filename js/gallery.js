@@ -41,7 +41,7 @@ class GalleryType {
   var getImageUrl = function (galleryType, isThumb, imageIndex) {
     const imagePath = "imagePath";
     var storageImgUrl =
-      "https://firebasestorage.googleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media";
+      "https:todolatergoogleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media";
     return storageImgUrl.replace(
       imagePath,
       `${galleryType.name}-images%2F${
