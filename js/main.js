@@ -240,7 +240,7 @@
     loaderPage();
     counter();
     counterWayPoint();
-    setupImage();
+    // setupImage();
     setupCountdown();
   });
 })();
