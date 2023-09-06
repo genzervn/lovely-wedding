@@ -1,11 +1,11 @@
 class GalleryType {
   static Prewedding = new GalleryType("prewedding", "Pre-wedding", 49, 'jpg');
-  static MassesAndRites = new GalleryType(
-    "massed-and-rites",
-    "Thánh lễ & nghi thức",
-    306,
-    'jpeg'
-  );
+  // static MassesAndRites = new GalleryType(
+  //   "massed-and-rites",
+  //   "TODO LATER Nghi thức",
+  //   306,
+  //   'jpeg'
+  // );
   static GroomParty = new GalleryType("groom-party", "Tiệc nhà trai", 224,'jpeg');
   static BrideParty = new GalleryType("bride-party", "Tiệc nhà gái", 153,'jpeg');
 

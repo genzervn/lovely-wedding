@@ -191,7 +191,7 @@
   };
 
   var setupCountdown = function () {
-    var d = new Date("May 07, 2022 16:00:00 GMT-0700");
+    var d = new Date("Jan 07, 2024 16:00:00 GMT-0700");
 
     simplyCountdown(".simply-countdown-one", {
       year: d.getFullYear(),
