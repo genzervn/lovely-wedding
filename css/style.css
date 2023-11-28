@@ -419,7 +419,7 @@ figure {
 #fh5co-event .event-wrap .event-time-col {
   width: 30%;
   float: left;
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
 }
 
 #fh5co-counter .event-wrap .event-date-col,
