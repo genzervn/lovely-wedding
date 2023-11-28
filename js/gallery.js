@@ -77,7 +77,7 @@ class GalleryType {
   };
 
   $(function () {
-    setupGalleryDescription();
+    // setupGalleryDescription();
     setupGalleryImage();
   });
 })();
