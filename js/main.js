@@ -218,14 +218,17 @@
     var imagePath = "imagePath";
     var storageImgUrl =
       "https://firebasestorage.googleapis.com/v0/b/wedding-94232.appspot.com/o/imagePath?alt=media";
-    document.getElementById("image-groom").src = storageImgUrl.replace(
-      imagePath,
-      "images%2Fgroom.jpg"
-    );
-    document.getElementById("image-bride").src = storageImgUrl.replace(
-      imagePath,
-      "images%2Fbride.jpg"
-    );
+    if(document.getElementById("image-groom") != null) {
+      document.getElementById("image-groom").src = storageImgUrl.replace(
+          imagePath,
+          "images%2Fgroom.jpg"
+      );
+      document.getElementById("image-bride").src = storageImgUrl.replace(
+          imagePath,
+          "images%2Fbride.jpg"
+      );
+    }
+
   };
 
   $(function () {
