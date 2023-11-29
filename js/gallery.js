@@ -6,8 +6,8 @@ class GalleryType {
   //   306,
   //   'jpeg'
   // );
-  static GroomParty = new GalleryType("groom-party", "Tiệc nhà trai", 224,'jpeg');
-  static BrideParty = new GalleryType("bride-party", "Tiệc nhà gái", 153,'jpeg');
+  static GroomParty = new GalleryType("groom-party", "Tiệc nhà trai", 0,'jpeg');
+  static BrideParty = new GalleryType("bride-party", "Tiệc nhà gái", 0,'jpeg');
 
   constructor(name, displayName, numberOfImages, fileType) {
     this.name = name;
