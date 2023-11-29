@@ -217,14 +217,14 @@
   var setupImage = function () {
     var imagePath = "imagePath";
     var storageImgUrl =
-      "https:todolatergoogleapis.com/v0/b/save-the-date-website.appspot.com/o/imagePath?alt=media";
+      "https://firebasestorage.googleapis.com/v0/b/wedding-94232.appspot.com/o/imagePath?alt=media";
     document.getElementById("image-groom").src = storageImgUrl.replace(
       imagePath,
-      "images%2Fgroom.jpeg"
+      "images%2Fgroom.jpg"
     );
     document.getElementById("image-bride").src = storageImgUrl.replace(
       imagePath,
-      "images%2Fbride.png"
+      "images%2Fbride.jpg"
     );
   };
 
@@ -240,6 +240,7 @@
     loaderPage();
     counter();
     counterWayPoint();
+    setupImage();
     setupCountdown();
   });
 })();
