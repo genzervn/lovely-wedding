@@ -447,6 +447,9 @@ figure {
   #fh5co-counter {
     height: auto;
   }
+  .simply-countdown {
+    margin-top: 11em;
+  }
 }
 
 .timeline {
