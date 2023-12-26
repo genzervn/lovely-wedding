@@ -194,24 +194,17 @@
                 } else {
                     secondsLeft = (targetDate - now.getTime()) / 1000;
                 }
-
-                if (secondsLeft > 0) {
-                    days = parseInt(secondsLeft / 86400, 10);
-                    secondsLeft = secondsLeft % 86400;
-
-                    hours = parseInt(secondsLeft / 3600, 10);
-                    secondsLeft = secondsLeft % 3600;
-
-                    minutes = parseInt(secondsLeft / 60, 10);
-                    seconds = parseInt(secondsLeft % 60, 10);
-                } else {
-                    days = 0;
-                    hours = 0;
-                    minutes = 0;
-                    seconds = 0;
-                    window.clearInterval(interval);
-                    parameters.onEnd();
+                if(secondsLeft <= 0) {
+                    secondsLeft = secondsLeft * -1;
                 }
+                days = parseInt(secondsLeft / 86400, 10);
+                secondsLeft = secondsLeft % 86400;
+
+                hours = parseInt(secondsLeft / 3600, 10);
+                secondsLeft = secondsLeft % 3600;
+
+                minutes = parseInt(secondsLeft / 60, 10);
+                seconds = parseInt(secondsLeft % 60, 10);
 
                 if (parameters.plural) {
                     dayWord = days > 1
