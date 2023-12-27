@@ -208,12 +208,13 @@
       enableUtc: true,
     });
 
-    // $("#simply-countdown-losange").simplyCountdown({
-    //   year: d.getFullYear(),
-    //   month: d.getMonth() + 1,
-    //   day: d.getDate(),
-    //   enableUtc: false,
-    // });
+    $("#simply-countdown-losange").simplyCountdown({
+      year: d.getFullYear(),
+      month: d.getMonth() + 1,
+      day: d.getDate(),
+      hours: d.getHours(),
+      enableUtc: true,
+    });
   };
 
   var setupImage = function () {
