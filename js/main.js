@@ -191,13 +191,13 @@
   };
 
   var setupCountdown = function () {
-    var d = new Date("Jan 07, 2024 09:00:00 GMT0000");
+    var d = new Date("Jan 07, 2024 09:00:00 GMT");
 
     simplyCountdown(".simply-countdown-one", {
-      year: d.getFullYear(),
-      month: d.getMonth() + 1,
-      day: d.getDate(),
-      hours: d.getHours(),
+      year: 2024,
+      month: 1,
+      day: 7,
+      hours: 16,
       words: {
         days: "ngày",
         hours: "giờ",
@@ -209,10 +209,10 @@
     });
 
     $("#simply-countdown-losange").simplyCountdown({
-      year: d.getFullYear(),
-      month: d.getMonth() + 1,
-      day: d.getDate(),
-      hours: d.getHours(),
+      year: 2024,
+      month: 1,
+      day: 7,
+      hours: 16,
       enableUtc: true,
     });
   };
